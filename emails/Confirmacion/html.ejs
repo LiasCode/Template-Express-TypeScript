@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	    <title>Código de Confirmación</title>
+     	<meta charset="utf-8">
+		<meta name="keywords" content="vinos , pure , picoreal , cuba  , botella , confirmar , codigo">
+		<meta name="description" content="Empresa venta de procesado de frutas 100% naturales">
+		<meta name="author" content="Raul Lias">
+		<meta name="copyright" content="PicoReal.cu">
+</head>
+ <style type="text/css">
+ 	body{
+	padding: 0;
+	margin: 0;
+    font-family: sans-serif;
+    background: white;
+}
+
+header{
+	color: rgb(145 , 15 ,15);
+	background: #F5BE29;
+	padding-bottom: 2%;
+	border-bottom: 2px solid;
+	border-color: rgb(100 , 15 ,15) ; 
+}
+
+form{
+	margin: auto;
+	width: 50%;
+	transform: translate(50% , 8%);
+	color : black ;
+	text-align: center;
+	background: none;
+}
+
+input {
+    margin: auto;
+	text-align: center;
+	border-radius: 20px;
+	color :#F9ECEC ;
+	background: rgb(145 , 15 ,15);
+
+}
+.codigo{
+	width: 50%;
+	margin: auto;
+	font-size: 200%;
+	padding: 0 0 ;
+	text-align: center;
+
+}
+
+footer{
+	
+	margin-top: 12%;
+	color: rgb(145 , 15 ,15);
+	text-align: center;
+	padding-top: 2px;
+	background: #F5BE29;
+	border-top: 2px solid;
+	border-color: rgb(100 , 15 ,15) ; 
+}
+ </style>
+<body>
+	<header>
+		<div> </div>
+	</header>
+	 
+	<form>
+		
+		
+		
+		<h2> Gracias por unirse a Pico Real.</h2>
+		
+		<h3>  <%= correo %> </h3>
+		
+		<div> Este es el ultimo paso para registrarse. Ingrese el siguiente número en la apk. </div>
+		
+		<div> <h3> Su codigo de confirmación es : </h3> <input type="text" class="codigo" value="<%= num %>"></div>
+
+	</form>
+
+	<footer>
+				
+			<div>
+					
+					<b class = "f"> Siguenos en: </b> <b>Número de Teléfono : </b> 58045580 ||  <b>Email: </b>bodegaspicoreal@gmail.com
+					<br>
+					<b>Copyright : todos los derechos reservados.</b><br>
+					
+			</div>
+
+	</footer>
+
+</body>
+</html>

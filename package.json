@@ -1,25 +1,31 @@
 {
-  "name": "working-with-babel",
+  "name": "template-express-typescript",
   "version": "1.0.0",
-  "description": "",
+  "description": "Template con una configuracion basica para crear un server con express y typescript",
   "main": "index.js",
   "scripts": {
-    "build": "babel src --out-dir dist",
-    "dev": "babel-watch ./src/index.js --clear-console -c ./babel.config.json",
-    "build-single-file": "babel src --out-file ./Dist/index-bundle-sf.js"
+    "build": "tsc",
+    "dev": "nodemon ./src/index.ts",
+    "start": "node ./dist/index.js",
+    "clean": "rmdir dist /S /Q"
   },
   "keywords": [],
-  "author": "",
+  "author": "Raul Lias",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.17.6",
     "@babel/core": "^7.17.8",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
     "babel-watch": "^7.7.0",
     "cors": "^2.8.5",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
   },
   "dependencies": {
     "express": "^4.17.3"

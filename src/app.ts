@@ -1,11 +1,11 @@
-import express from "express";
+import express, { Application } from "express";
 import path from "path";
 import morgan from "morgan";
 import cors from "cors";
 
 import GlobalRouter from "./routes";
 
-const App = express();
+const App: Application = express();
 
 // Settings
 App.set("port", 3000);

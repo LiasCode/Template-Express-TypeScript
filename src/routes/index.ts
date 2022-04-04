@@ -1,12 +1,10 @@
-import { Router, json } from "express";
+import { Router, Request, Response } from "express";
 import { UserRouter } from "./user.routes";
 import path from "path";
 
 const GlobalRouter = Router();
 
-GlobalRouter.use(json());
-
-GlobalRouter.get("/", (req, res) => {
+GlobalRouter.get("/", (req: Request, res: Response) => {
   res.sendFile(path.join(__dirname, "..", "views/index.html"));
 });
 
@@ -16,11 +14,11 @@ GlobalRouter.use("/api/user", UserRouter);
 // ##########################
 
 // ERROR 404
-GlobalRouter.get("/error404", (req, res) => {
+GlobalRouter.get("/error404", (req: Request, res: Response) => {
   res.send("error 404");
 });
 
-GlobalRouter.get("/*", (req, res) => {
+GlobalRouter.get("/*", (req: Request, res: Response) => {
   res.redirect("/error404");
 });
 
